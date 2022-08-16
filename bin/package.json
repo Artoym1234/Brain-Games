@@ -2,14 +2,16 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "",
-  "main": "brain-games.js",
+  "main": "brain-games.js", 
   "type": "module",
   "bin": {
-  "brain-games": "bin/brain-games.js"
+  "brain-games": "bin/brain-games.js",
+  "brain-even": "bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Art",
   "license": "ISC"
+  
 }
