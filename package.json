@@ -27,7 +27,7 @@
     "simple-git-hooks": "^2.8.0"
   },
   "devDependencies": {
-    "eslint-config-airbnb-typescript": "^17.0.0"
-  
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "linter-bundle": "^2.18.0"
   }
 }

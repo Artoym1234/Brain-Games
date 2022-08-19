@@ -6,6 +6,10 @@ brain-games: # запуск игры
 	
 brain-even: # запуск игры
 	node bin/brain-even.js
+
+brain-calc: # запуск игры
+	node bin/brain-calc.js	
+	
 	
 publish:
 	npm publish --dry-run
