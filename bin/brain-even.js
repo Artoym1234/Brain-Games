@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { getUserName, playRound } from "../src/Games/games-even.js";
+import playGameEven from "../src/Games/games-even.js";
 
-getUserName();
-playRound();
+playGameEven();
