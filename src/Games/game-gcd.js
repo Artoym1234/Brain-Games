@@ -6,9 +6,9 @@ function playGameGcd() {
   function gcd() {
     const number1 = randomNumber(100);
     const number2 = randomNumber(100);
-    const questions = `${number1}  ${number2}`;
-    let x = Math.abs(number1);
-    let y = Math.abs(number2);
+    const questions = `${number1} ${number2}`;
+    let x = number1;
+    let y = number2;
     while (y) {
       const t = y;
       y = x % y;
