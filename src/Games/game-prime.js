@@ -1,7 +1,7 @@
-import globalGames, { randomNumber } from "../index.js";
+import globalGames, { randomNumber } from '../index.js';
 
 function playGamePrime() {
-  const exercise = "\"yes\" if given number is prime. Otherwise answer \"no\".";
+  const exercise = '"yes" if given number is prime. Otherwise answer "no".';
 
   const isPrimeNumber = (num) => {
     if (num <= 1) return false;
@@ -13,7 +13,7 @@ function playGamePrime() {
 
   const prime = () => {
     const question = randomNumber(100);
-    const answer = isPrimeNumber(question) ? "yes" : "no";
+    const answer = isPrimeNumber(question) ? 'yes' : 'no';
     return [question, answer];
   };
 

@@ -1,7 +1,7 @@
-import globalGame, { randomNumber } from "../index.js";
+import globalGame, { randomNumber } from '../index.js';
 
 function playGameProgression() {
-  const exercise = "What number is missing in the progression?";
+  const exercise = 'What number is missing in the progression?';
 
   function progressia() {
     const arr1 = [];
@@ -17,8 +17,8 @@ function playGameProgression() {
     const randomCloseNumber = Math.round(Math.random() * (9 - 0)) + 0;
     const arr2 = progressia();
     const answer = arr2[randomCloseNumber];
-    arr2[randomCloseNumber] = "..";
-    return [arr2.join(" "), String(answer)];
+    arr2[randomCloseNumber] = '..';
+    return [arr2.join(' '), String(answer)];
   }
   globalGame(exercise, closeNumberprogressia);
 }

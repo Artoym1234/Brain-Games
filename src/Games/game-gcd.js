@@ -1,7 +1,7 @@
-import globalGame, { randomNumber } from "../index.js";
+import globalGame, { randomNumber } from '../index.js';
 
 function playGameGcd() {
-  const exercise = "Find the greatest common divisor of given numbers.";
+  const exercise = 'Find the greatest common divisor of given numbers.';
 
   function gcd() {
     const number1 = randomNumber(100);
