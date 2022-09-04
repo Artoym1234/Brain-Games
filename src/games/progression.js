@@ -23,4 +23,5 @@ function playGameProgression() {
   const descriptionGame = 'What number is missing in the progression?';
   run(descriptionGame, generateData);
 }
+
 export default playGameProgression;

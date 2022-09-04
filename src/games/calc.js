@@ -28,4 +28,5 @@ function playGameCalc() {
   const descriptionGame = 'What is the result of the expression?';
   run(descriptionGame, generateData);
 }
+
 export default playGameCalc;

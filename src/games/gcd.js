@@ -19,4 +19,5 @@ function playGameGcd() {
   const descriptionGame = 'Find the greatest common divisor of given numbers.';
   run(descriptionGame, generateData);
 }
+
 export default playGameGcd;

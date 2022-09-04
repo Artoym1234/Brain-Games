@@ -16,4 +16,5 @@ function playGameEven() {
   const descriptionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
   run(descriptionGame, generateData);
 }
+
 export default playGameEven;

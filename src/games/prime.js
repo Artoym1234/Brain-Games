@@ -19,4 +19,5 @@ function playGamePrime() {
   const descriptionGame = '"yes" if given number is prime. Otherwise answer "no".';
   run(descriptionGame, generateData);
 }
+
 export default playGamePrime;
