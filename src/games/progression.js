@@ -6,12 +6,12 @@ const min = 1;
 const max = 100;
 const minStep = 1;
 const maxStep = 5;
-const maxLength = 10;
+const maxLength = 11;
 const minRange = 0;
 
 const makeProgressia = (firstNum, step, lengthProgression) => {
   const progression = [];
-  for (let i = 0; i < lengthProgression; i += step) {
+  for (let i = 1; i < lengthProgression; i += step) {
     progression.push(firstNum + i);
   }
   return progression;
