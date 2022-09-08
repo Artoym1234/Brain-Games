@@ -1,20 +1,21 @@
 import run from '../index.js';
-import getRandomNumber from './utils.js';
+import getRandomNumber from '../utils.js';
 
-function generateData() {
-  const question = getRandomNumber(100);
-  let rezult = '';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const min = 0;
+const max = 100;
+
+const generateRound = () => {
+  const question = getRandomNumber(min, max);
+  let correctAnswer = '';
   if (question % 2 === 0) {
-    rezult = 'yes';
+    correctAnswer = 'yes';
   } if (question % 2 !== 0) {
-    rezult = 'no';
+    correctAnswer = 'no';
   }
-  return [question, rezult];
-}
+  return [question, correctAnswer];
+};
 
-function playGameEven() {
-  const descriptionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
-  run(descriptionGame, generateData);
-}
+const playEven = () => run(description, generateRound);
 
-export default playGameEven;
+export default playEven;

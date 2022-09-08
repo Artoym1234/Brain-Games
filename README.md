@@ -19,26 +19,12 @@ brain-progression
 [![asciicast](https://asciinema.org/a/7ncb1S1Z1urqjEvQ9zEUv7vpI.svg)](https://asciinema.org/a/7ncb1S1Z1urqjEvQ9zEUv7vpI)
 
 brain-prime
-[![asciicast](https://asciinema.org/a/j2lT3HZ6gprCATfjBRfEmxrzX)](https://asciinema.org/a/j2lT3HZ6gprCATfjBRfEmxrzX)
+[![asciicast](https://asciinema.org/a/j2lT3HZ6gprCATfjBRfEmxrzX.svg)](https://asciinema.org/a/j2lT3HZ6gprCATfjBRfEmxrzX)
 
 ### Setup
-```
-make install
-sudo npm link
-```
-### Run game
-```
-brain-even
-```
-```
-brain-calc 
-```
-```
-brain-gcd
-```
-```
-brain-progression
-```
-```
-brain-prime
-```
+* Install Node.js if you don't have it.
+* Clone the repository to any convenient location on your computer: `git@github.com:Artoym1234/frontend-project-lvl1.git`
+* Go to the root directory of the project
+* Perform a dependency installation using the `make install` command
+* Install the package with the `npm link` command. You may need to `sudo`
+* Now run any game you want. Just enter the name of the game

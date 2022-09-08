@@ -1,27 +1,34 @@
 import run from '../index.js';
-import getRandomNumber from './utils.js';
+import getRandomNumber from '../utils.js';
 
-function makeProgressia() {
-  const arr1 = [];
-  const randomProgressia = getRandomNumber(100);
-  const randomStep = Math.floor(Math.random() * (5 - 1)) + 1;
-  for (let i = 0; i < randomStep * 10; i += randomStep) {
-    arr1.push(randomProgressia + i);
+const description = 'What number is missing in the progression?';
+const min = 1;
+const max = 100;
+const minStep = 1;
+const maxStep = 5;
+const maxLength = 10;
+const minRange = 0;
+
+const makeProgressia = (firstNum, step, lengthProgression) => {
+  const progression = [];
+  for (let i = 0; i < lengthProgression; i += step) {
+    progression.push(firstNum + i);
   }
-  return arr1;
-}
+  return progression;
+};
 
-function generateData() {
-  const randomCloseNumber = Math.round(Math.random() * (9 - 0)) + 0;
-  const arr2 = makeProgressia();
-  const answer = arr2[randomCloseNumber];
-  arr2[randomCloseNumber] = '..';
-  return [arr2.join(' '), String(answer)];
-}
+const generateRound = () => {
+  const firstNum = getRandomNumber(min, max);
+  const step = getRandomNumber(minStep, maxStep);
+  const lengthProgression = step * maxLength;
+  const progression = makeProgressia(firstNum, step, lengthProgression);
+  const randomCloseNum = getRandomNumber(minRange, progression.length - 1);
+  const correctAnswer = String(progression[randomCloseNum]);
+  progression[randomCloseNum] = '..';
+  const question = progression.join(' ');
+  return [question, correctAnswer];
+};
 
-function playGameProgression() {
-  const descriptionGame = 'What number is missing in the progression?';
-  run(descriptionGame, generateData);
-}
+const playProgression = () => run(description, generateRound);
 
-export default playGameProgression;
+export default playProgression;
