@@ -11,7 +11,7 @@ const minRange = 0;
 
 const makeProgressia = (firstNum, step, lengthProgression) => {
   const progression = [];
-  for (let i = 1; i < lengthProgression; i += step) {
+  for (let i = 1; i <= lengthProgression; i += step) {
     progression.push(firstNum + i);
   }
   return progression;
