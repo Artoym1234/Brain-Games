@@ -6,13 +6,13 @@ const min = 1;
 const max = 100;
 const minStep = 1;
 const maxStep = 5;
-const maxLength = 11;
+const maxLength = 10;
 const minRange = 0;
 
-const makeProgressia = (firstNum, step, lengthProgression) => {
+const makeProgressia = (firstNum, step) => {
   const progression = [];
-  for (let i = 1; i <= lengthProgression; i += step) {
-    progression.push(firstNum + i);
+  for (let i = 1; i <= maxLength; i += 1) {
+    progression.push(firstNum + step * i);
   }
   return progression;
 };
@@ -20,8 +20,7 @@ const makeProgressia = (firstNum, step, lengthProgression) => {
 const generateRound = () => {
   const firstNum = getRandomNumber(min, max);
   const step = getRandomNumber(minStep, maxStep);
-  const lengthProgression = step * maxLength;
-  const progression = makeProgressia(firstNum, step, lengthProgression);
+  const progression = makeProgressia(firstNum, step);
   const randomCloseNum = getRandomNumber(minRange, progression.length - 1);
   const correctAnswer = String(progression[randomCloseNum]);
   progression[randomCloseNum] = '..';
