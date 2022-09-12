@@ -5,18 +5,18 @@ const description = 'Find the greatest common divisor of given numbers.';
 const min = 0;
 const max = 100;
 
+const getGcd = (number1, number2) => {
+  if (!number2) {
+    return number1;
+  }
+  return getGcd(number2, number1 % number2);
+};
+
 const generateRound = () => {
   const number1 = getRandomNumber(min, max);
   const number2 = getRandomNumber(min, max);
   const questions = `${number1} ${number2}`;
-  let x = number1;
-  let y = number2;
-  while (y) {
-    const t = y;
-    y = x % y;
-    x = t;
-  }
-  const correctAnswer = String(x);
+  const correctAnswer = String(getGcd(number1, number2));
   return [questions, correctAnswer];
 };
 

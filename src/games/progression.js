@@ -1,29 +1,28 @@
 import run from '../index.js';
-import getRandomNumber from '../utils.js';
+import getRandomNumber, { getRandomIndex } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
-const min = 1;
-const max = 100;
+const minStart = 1;
+const maxStart = 100;
 const minStep = 1;
 const maxStep = 5;
-const maxLength = 10;
-const minRange = 0;
 
-const makeProgressia = (firstNum, step) => {
+const createProgression = (first, step, length) => {
   const progression = [];
-  for (let i = 1; i <= maxLength; i += 1) {
-    progression.push(firstNum + step * i);
+  for (let i = 1; i <= length; i += 1) {
+    progression.push(first + step * i);
   }
   return progression;
 };
 
 const generateRound = () => {
-  const firstNum = getRandomNumber(min, max);
+  const firstNum = getRandomNumber(minStart, maxStart);
   const step = getRandomNumber(minStep, maxStep);
-  const progression = makeProgressia(firstNum, step);
-  const randomCloseNum = getRandomNumber(minRange, progression.length - 1);
-  const correctAnswer = String(progression[randomCloseNum]);
-  progression[randomCloseNum] = '..';
+  const limitLength = 10;
+  const progression = createProgression(firstNum, step, limitLength);
+  const indexHiddenNum = getRandomIndex(progression);
+  const correctAnswer = String(progression[indexHiddenNum]);
+  progression[indexHiddenNum] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };

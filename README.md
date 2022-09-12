@@ -5,6 +5,41 @@
 ## Discription
 "Brain Games" is a set of five console games built around a game of popular mobile brain-pumping apps. Each game asks questions that must be answered. If you answered correctly three times, then the game is over. If your answers are not correct, then the game ends and returns to the beginning.
 
+## Minimal system requirements
+OS - Node.js 13+
+
+### Instal
+* Clone the repository: `git@github.com:Artoym1234/frontend-project-lvl1.git`
+```
+git clone
+```
+* Install dependencies 
+```
+make install
+```
+* Install the package
+```
+sudo npm link
+```
+
+### Run 
+```
+brain- even
+```
+```
+brain-calc
+```
+```
+brain-gcd
+```
+```
+brain-progression
+```
+```
+brain-prime
+```
+
+
 ### Demonstration 
 brain- even 
 [![asciicast](https://asciinema.org/a/tbtRLIvD7Sw4058Q1FKB8Ui4c.svg)](https://asciinema.org/a/tbtRLIvD7Sw4058Q1FKB8Ui4c)
@@ -20,11 +55,3 @@ brain-progression
 
 brain-prime
 [![asciicast](https://asciinema.org/a/j2lT3HZ6gprCATfjBRfEmxrzX.svg)](https://asciinema.org/a/j2lT3HZ6gprCATfjBRfEmxrzX)
-
-### Setup
-* Install Node.js if you don't have it.
-* Clone the repository to any convenient location on your computer: `git@github.com:Artoym1234/frontend-project-lvl1.git`
-* Go to the root directory of the project
-* Perform a dependency installation using the `make install` command
-* Install the package with the `npm link` command. You may need to `sudo`
-* Now run any game you want. Just enter the name of the game

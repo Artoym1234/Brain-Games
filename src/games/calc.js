@@ -1,5 +1,5 @@
 import run from '../index.js';
-import getRandomNumber from '../utils.js';
+import getRandomNumber, { getRandomIndex } from '../utils.js';
 
 const signs = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
@@ -19,7 +19,7 @@ const calculate = (number1, number2, sign) => {
       result = number1 * number2;
       break;
     default:
-      result = null;
+      throw new Error(`Unknown operator: '${sign}'!`);
   }
   return result;
 };
@@ -27,7 +27,7 @@ const calculate = (number1, number2, sign) => {
 const generateRound = () => {
   const number1 = getRandomNumber(min, max);
   const number2 = getRandomNumber(min, max);
-  const sign = signs[getRandomNumber(0, signs.length - 1)];
+  const sign = signs[getRandomIndex(signs)];
   const questions = `${number1} ${sign} ${number2}`;
   const correctAnswer = String(calculate(number1, number2, sign));
   return [questions, correctAnswer];
