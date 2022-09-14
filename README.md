@@ -6,7 +6,7 @@
 "Brain Games" is a set of five console games built around a game of popular mobile brain-pumping apps. Each game asks questions that must be answered. If you answered correctly three times, then the game is over. If your answers are not correct, then the game ends and returns to the beginning.
 
 ## Minimal system requirements
-OS - Node.js 13+
+Node.js 13.2.0
 
 ### Instal
 * Clone the repository: `git@github.com:Artoym1234/frontend-project-lvl1.git`

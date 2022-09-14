@@ -1,5 +1,4 @@
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-const getRandomIndex = (array) => Math.floor(Math.random() * array.length);
+const getRandomIndex = (data) => Math.floor(Math.random() * data.length);
 
-export { getRandomIndex };
-export default getRandomNumber;
+export { getRandomIndex, getRandomNumber };

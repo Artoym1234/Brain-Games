@@ -1,27 +1,22 @@
 import run from '../index.js';
-import getRandomNumber, { getRandomIndex } from '../utils.js';
+import { getRandomNumber, getRandomIndex } from '../utils.js';
 
 const signs = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 const min = 0;
 const max = 100;
 
-const calculate = (number1, number2, sign) => {
-  let result = '';
+const calculate = (x, y, sign) => {
   switch (sign) {
     case '+':
-      result = number1 + number2;
-      break;
+      return x + y;
     case '-':
-      result = number1 - number2;
-      break;
+      return x - y;
     case '*':
-      result = number1 * number2;
-      break;
+      return x * y;
     default:
       throw new Error(`Unknown operator: '${sign}'!`);
   }
-  return result;
 };
 
 const generateRound = () => {
