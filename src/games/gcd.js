@@ -15,6 +15,7 @@ const generateRound = () => {
   return [questions, correctAnswer];
 };
 
-const playGcd = () => run(description, generateRound);
-
+const playGcd = () => {
+  run(description, generateRound);
+};
 export default playGcd;

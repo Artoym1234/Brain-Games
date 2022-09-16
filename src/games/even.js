@@ -14,6 +14,8 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-const playEven = () => run(description, generateRound);
+const playEven = () => {
+  run(description, generateRound);
+};
 
 export default playEven;

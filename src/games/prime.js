@@ -20,6 +20,7 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-const playPrime = () => run(description, generateRound);
-
+const playPrime = () => {
+  run(description, generateRound);
+};
 export default playPrime;

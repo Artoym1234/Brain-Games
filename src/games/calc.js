@@ -28,6 +28,8 @@ const generateRound = () => {
   return [questions, correctAnswer];
 };
 
-const playCalc = () => run(description, generateRound);
+const playCalc = () => {
+  run(description, generateRound);
+};
 
 export default playCalc;
