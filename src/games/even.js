@@ -10,7 +10,7 @@ const isEven = (number) => number % 2 === 0;
 const generateRound = () => {
   const number = getRandomNumber(min, max);
   const question = String(number);
-  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
